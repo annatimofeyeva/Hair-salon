@@ -16,7 +16,7 @@ User Stories:
 * User should be able to update a client's details.
 * User should be able to to delete a stylist if they're no longer employed here.
 * User should be able to to delete a client if they no longer visit our salon.
-Startup weekend event
+
 
 ## SPECS
 
