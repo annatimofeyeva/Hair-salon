@@ -1,5 +1,12 @@
-#phone_address{
+form{
+  margin-bottom: 50px;
   margin-top: 40px;
+}
+#name{
+  width: 97%;
+}
+#phone_address{
+  margin-top: 60px;
 }
 #saladdress{
   font-size: 22px;

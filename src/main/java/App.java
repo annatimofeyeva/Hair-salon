@@ -27,7 +27,12 @@ public static void main(String[] args){
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
-
+    post("/messages", (request, response) -> {
+        Map<String, Object> model = new HashMap<String, Object>();
+        String name = request.queryParams("name");
+        //Team newTeam = new Team(name);
+        model.put("template", "templates/messages.vtl");
+        return new ModelAndView(model, layout);
+      }, new VelocityTemplateEngine());
  }
 }
