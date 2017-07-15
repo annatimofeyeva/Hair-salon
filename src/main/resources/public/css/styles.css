@@ -1,5 +1,12 @@
-body{
-  background-color: #f4eae6;
+.well{
+  width: 96%;
+}
+#header{
+  font-style: italic;
+  font-size: 37px;
+  font-family: fantasy;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 img{
   zoom: 110%;
