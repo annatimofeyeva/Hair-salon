@@ -1,3 +1,32 @@
+#phone_address{
+  margin-top: 40px;
+}
+#saladdress{
+  font-size: 22px;
+  font-family: fantasy;
+  }
+#phone{
+  font-size: 22px;
+  font-family: fantasy;
+}
+
+#map{
+font-size: 20px;
+font-style: italic;
+}
+#address{
+font-size: 22px;
+font-style: italic;
+padding-left: 40px;
+margin-left: 100px;
+}
+#salonmap{
+margin-bottom: 40px;
+margin-left: 150px;
+}
+#location{
+   box-shadow: 10px 10px 5px grey;
+}
 #contactslink{
   font-size: 25px;
 }
