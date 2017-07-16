@@ -61,11 +61,32 @@ public class ClientTest {
 }
 
   @Test
-  public void getId_clientsInstantiateWithAnID() {
+    public void getId_clientsInstantiateWithAnID() {
     Client myClient = new Client("Anna Timofeeva");
     myClient.save();
     assertTrue(myClient.getId() > 0);
   }
+
+  @Test
+    public void find_returnsClientsWithSameId_secondClient() {
+    Client firstClient = new Client("Anna Timofeeva");
+    firstClient.save();
+    Client secondClient = new Client("Kirill Timofeev");
+    secondClient.save();
+    assertEquals(Client.find(secondClient.getId()), secondClient);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  }
