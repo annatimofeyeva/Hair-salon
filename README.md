@@ -28,7 +28,7 @@ User Stories:
 
 4. App should display each Clients's ans Stylist's profile.
 
-5. App should redirects to the ????? web pages.
+5. App should redirects to "Stylists", "Styls", "Shop", "Product Lines", "Boo an Appointment" web pages.
 
 
 ## Setup/Installation Requirements

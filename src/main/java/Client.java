@@ -18,7 +18,7 @@ public class Client{
   }
 
   public static List<Client> all(){
-    String sql = "select id, full_name from clients";
+    String sql = "select id, name from clients";
     try(Connection con = DB.sql2o.open()) {
       return con.createQuery(sql).executeAndFetch(Client.class);
     }
@@ -30,7 +30,25 @@ public class Client{
         return false;
       } else {
         Client newClient = (Client) otherClient;
-        return this.getName().equals(newClient.getName());
+        return this.getName().equals(newClient.getName()) &&
+        this.getId() == newClient.getId();
     }
   }
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO clients(name) VALUES (:name)";
+      this.Id = (int) con.createQuery(sql, true)
+      .addParameter("name", this.name)
+      .executeUpdate()
+      .getKey();
+    }
+  }
+
+
+
+
+
+
+
+
 }
