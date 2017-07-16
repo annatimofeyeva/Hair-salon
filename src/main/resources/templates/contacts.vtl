@@ -1,47 +1,41 @@
 <!--contacts.vtl-->
-
 <div class="row" id="phone_address">
-  <div class="col-md-6" id="phone"><span class="glyphicon glyphicon-earphone"> Telephone:(425) XXX-XX-XX</span>
+  <div class="col-md-6" id="phone"><span class="glyphicon glyphicon-earphone"> Telephone: (425)XXX-XXXX</span>
   </div>
   <div class="col-md-6" id="saladdress"><span class="glyphicon glyphicon-map-marker"> Location: 671 156th Ave SE, Bellevue WA</span>
   </div>
 </div>
+<form action="/messages" method="post">
+  <input id="clientsId" name="clientsId" type="hidden" value="$clients.getId()">
+  <div class="form-group">
+    <label for="first_name">First Name:</label>
+    <input id="_first_name" name="first_name" type="text" class="form-control" placeholder="Please, enter your first name">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name:</label>
+    <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Please, enter your last name">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone number</label>
+    <input id="inputname" name="phone" type="text" class="form-control" placeholder="Please, enter you phone number: (xxx)xxx-xxxx">
+  </div>
+  <div class="form-group">
+    <label for="phone">Message</label>
+    <input id="inputmessage" name="message" type="text" class="form-control" placeholder="Please, leave your message">
+  </div>
 
-
-    <form action="/messages" method="post">
-      <input id="clientsId" name="clientsId" type="hidden" value="$clients.getId()">
-
-      <div class="form-group">
-          <label for="name">Name:</label>
-          <input id="name" name="name" type="text" class="form-control"   placeholder="Enter your name">
-      </div>
-
-      <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input id="name" name="phone" type="text" class="form-control"   placeholder="Your phone number">
-      </div>
-      <div class="form-group">
-          <label for="phone">Message</label>
-          <input id="name" name="phone" type="text" class="form-control"   placeholder="Please, leave your message">
-      </div>
-
-     <button type="submit" class="btn btn-default btn-lg">Submit</button>
-  </form>
-
+  <button type="submit" class="btn btn-default btn-lg">Submit</button>
+</form>
 <div class="well" id="location">
-  <img id="salonmap" src='/img/map.png' alt='map of hair salon'/>
-<div class="row">
-  <div class="col-md-7" id="address">
-  671 156th Ave SE, Bellevue, WA 98007<br>
-  At this address:<br>
-  <a href="/">Hair Salon and Spa</a><br>
+  <img id="salonmap" src='/img/map.png' alt='map of hair salon' />
+  <div class="row">
+    <div class="col-md-7" id="address">
+      671 156th Ave SE, Bellevue, WA 98007<br> At this address:<br>
+      <a href="/">Hair Salon and Spa</a><br>
+    </div>
+    <div class="col-md-3" id="map">
+      <a href="https://www.google.com/maps/place/671+156th+Ave+SE,+Bellevue,+WA+98007/@47.6036174,-122.1330279,17z/data=!3m1!4b1!4m5!3m4!1s0x54906c3323ef2423:0x3342d8c7d6ebf235!8m2!3d47.6036174!4d-122.1308392">Get Directions</a>
+    </div>
+  </div>
 </div>
-   <div class="col-md-3" id="map">
-<a href="https://www.google.com/maps/place/671+156th+Ave+SE,+Bellevue,+WA+98007/@47.6036174,-122.1330279,17z/data=!3m1!4b1!4m5!3m4!1s0x54906c3323ef2423:0x3342d8c7d6ebf235!8m2!3d47.6036174!4d-122.1308392">Get Directions</a>
-</div>
-</div>
-</div>
-
-
-
 <!--contacts.vtl-->

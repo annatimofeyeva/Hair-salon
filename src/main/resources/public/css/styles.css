@@ -16,7 +16,10 @@ form{
   font-size: 22px;
   font-family: fantasy;
 }
-
+#message{
+  font-size: 22px;
+  font-family: fantasy;
+}
 #map{
 font-size: 20px;
 font-style: italic;
@@ -44,12 +47,10 @@ margin-left: 150px;
 .well{
   width: 96%;
   }
-
 #about{
   font-size:19px;
   font-style: italic;
 }
-
 #header{
   font-style: italic;
   font-size: 37px;
@@ -57,12 +58,10 @@ margin-left: 150px;
   margin-bottom: 30px;
   margin-top: 50px;
 }
-
 img{
   zoom: 110%;
   margin-bottom: 150px;
 }
-
 .deg_btn {
     position: relative;
     display: inline-block;
@@ -79,7 +78,6 @@ img{
     margin-top: 30px;
     margin-bottom: 30px;
   }
-
 .deg_btn:before {
     position: absolute;
     content: '';
@@ -98,7 +96,6 @@ img{
     width:186px;
     height:157px;*/
 }
-
 .button {
     position:absolute;
     bottom:10px;
@@ -109,7 +106,6 @@ img{
     z-index: 1;
     transition: .4s;
 }
-
 .deg_btn:after {
     position: absolute;
     content: '';
@@ -123,11 +119,9 @@ img{
     z-index: 1;
     transition: .4s;
 }
-
 .deg_btn:hover:before, .deg_btn:hover:after{
     border-left-width: 25px;
 }
-
 .deg_btn:hover{
     background: #f7ceb4;
 }
