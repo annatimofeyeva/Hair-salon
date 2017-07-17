@@ -1,0 +1,14 @@
+
+<!--stylists.vtl-->
+<h1>All stylists</h1>
+<ul>
+  #foreach ($stylist in $stylists)
+    <br>
+    <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+    <img height="160" width = "180" src="$stylist.getImage()">
+    <br>
+  #end
+  <br>
+</ul>
+<a href="/stylists/new">Add a New Stylist</a>
+<!--stylists.vtl-->
