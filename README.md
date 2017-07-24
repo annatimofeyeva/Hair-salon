@@ -63,16 +63,6 @@ User Stories:
 * _Upload the project to Github._
 
 
-## Setup/Installation Requirements
-
-* _Navigate to the project folder.  On the terminal, type "gradle run", then enter the following in the browser's URL bar: http://localhost:4567/._
-
-## To Restore Databases:
-
-* _To restore the database type the following from the command prompt in the solution root folder:
-$ sh db_restore.sh_
-
-
 ## Technologies Used
 
 * Java
