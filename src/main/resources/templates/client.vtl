@@ -1,0 +1,21 @@
+<!--client.vtl-->
+<h1>$client.getName()</h1>
+
+<h2> Is one of $stylist.getName()'s clients.</h2>
+
+<h2>Edit client:</h2>
+
+<form action="/stylists/$client.getStylistId()/client/$client.getId()" method="post">
+  <label for="name">Client's name</label>
+  <input id="name" name="name" type="text">
+  <button type="submit" class="btn btn-primary">Update Client</button>
+</form>
+<br>
+<form action="/stylists/$client.getStylistId()/clients/$client.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-client">Delete Client</button>
+</form>
+<br>
+<br>
+
+<a href="/stylists/$stylist.getId()">Return to stylist $stylist.getName()</a>
+<!--client.vtl-->
