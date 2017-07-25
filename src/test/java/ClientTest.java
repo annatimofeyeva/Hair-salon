@@ -75,4 +75,20 @@ public class ClientTest {
       Client savedClient = Client.find(myClient.getId());
       assertEquals(savedClient.getStylistId(), myStylist.getId());
     }
+  @Test
+    public void update_updatesClientDescription_true() {
+      Client myClient = new Client("Anna Timofeeva", 1);
+      myClient.save();
+      myClient.update("Kirill Timofeev");
+      assertEquals("Kirill Timofeev", Client.find(myClient.getId()).getDescription());
+}
+
+  @Test
+    public void delete_deletesClient_true() {
+      Client myClient = new Client("Anna Timofeeva", 1);
+      myClient.save();
+      int myClientId = myClient.getId();
+      myClient.delete();
+      assertEquals(null, Client.find(myClientId));
+    }
   }
