@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.3
--- Dumped by pg_dump version 9.6.3
+-- Dumped from database version 9.5.3
+-- Dumped by pg_dump version 9.5.3
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -35,7 +34,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: anya
+-- Name: clients; Type: TABLE; Schema: public; Owner: Guest
 --
 
 CREATE TABLE clients (
@@ -45,10 +44,10 @@ CREATE TABLE clients (
 );
 
 
-ALTER TABLE clients OWNER TO anya;
+ALTER TABLE clients OWNER TO "Guest";
 
 --
--- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: anya
+-- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: Guest
 --
 
 CREATE SEQUENCE clients_id_seq
@@ -59,17 +58,17 @@ CREATE SEQUENCE clients_id_seq
     CACHE 1;
 
 
-ALTER TABLE clients_id_seq OWNER TO anya;
+ALTER TABLE clients_id_seq OWNER TO "Guest";
 
 --
--- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: anya
+-- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: Guest
 --
 
 ALTER SEQUENCE clients_id_seq OWNED BY clients.id;
 
 
 --
--- Name: stylists; Type: TABLE; Schema: public; Owner: anya
+-- Name: stylists; Type: TABLE; Schema: public; Owner: Guest
 --
 
 CREATE TABLE stylists (
@@ -78,10 +77,10 @@ CREATE TABLE stylists (
 );
 
 
-ALTER TABLE stylists OWNER TO anya;
+ALTER TABLE stylists OWNER TO "Guest";
 
 --
--- Name: stylists_id_seq; Type: SEQUENCE; Schema: public; Owner: anya
+-- Name: stylists_id_seq; Type: SEQUENCE; Schema: public; Owner: Guest
 --
 
 CREATE SEQUENCE stylists_id_seq
@@ -92,31 +91,31 @@ CREATE SEQUENCE stylists_id_seq
     CACHE 1;
 
 
-ALTER TABLE stylists_id_seq OWNER TO anya;
+ALTER TABLE stylists_id_seq OWNER TO "Guest";
 
 --
--- Name: stylists_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: anya
+-- Name: stylists_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: Guest
 --
 
 ALTER SEQUENCE stylists_id_seq OWNED BY stylists.id;
 
 
 --
--- Name: clients id; Type: DEFAULT; Schema: public; Owner: anya
+-- Name: id; Type: DEFAULT; Schema: public; Owner: Guest
 --
 
 ALTER TABLE ONLY clients ALTER COLUMN id SET DEFAULT nextval('clients_id_seq'::regclass);
 
 
 --
--- Name: stylists id; Type: DEFAULT; Schema: public; Owner: anya
+-- Name: id; Type: DEFAULT; Schema: public; Owner: Guest
 --
 
 ALTER TABLE ONLY stylists ALTER COLUMN id SET DEFAULT nextval('stylists_id_seq'::regclass);
 
 
 --
--- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: anya
+-- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: Guest
 --
 
 COPY clients (id, description, stylistid) FROM stdin;
@@ -124,14 +123,14 @@ COPY clients (id, description, stylistid) FROM stdin;
 
 
 --
--- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: anya
+-- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('clients_id_seq', 2, true);
+SELECT pg_catalog.setval('clients_id_seq', 12, true);
 
 
 --
--- Data for Name: stylists; Type: TABLE DATA; Schema: public; Owner: anya
+-- Data for Name: stylists; Type: TABLE DATA; Schema: public; Owner: Guest
 --
 
 COPY stylists (id, name) FROM stdin;
@@ -139,14 +138,14 @@ COPY stylists (id, name) FROM stdin;
 
 
 --
--- Name: stylists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: anya
+-- Name: stylists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('stylists_id_seq', 5, true);
+SELECT pg_catalog.setval('stylists_id_seq', 11, true);
 
 
 --
--- Name: clients clients_pkey; Type: CONSTRAINT; Schema: public; Owner: anya
+-- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: Guest
 --
 
 ALTER TABLE ONLY clients
@@ -154,11 +153,21 @@ ALTER TABLE ONLY clients
 
 
 --
--- Name: stylists stylists_pkey; Type: CONSTRAINT; Schema: public; Owner: anya
+-- Name: stylists_pkey; Type: CONSTRAINT; Schema: public; Owner: Guest
 --
 
 ALTER TABLE ONLY stylists
     ADD CONSTRAINT stylists_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: epicodus
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM epicodus;
+GRANT ALL ON SCHEMA public TO epicodus;
+GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --

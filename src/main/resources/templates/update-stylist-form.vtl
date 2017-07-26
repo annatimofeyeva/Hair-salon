@@ -1,0 +1,17 @@
+<!--add-stylist-form.vtl-->
+<h1>Update Stylist</h1>
+
+<form action="/stylist/$stylist.getId()/update" method="post">
+  <label for="stylist-name">Name of Stylist: </label>
+  <input id="stylist-name" name="stylist-name" value="$stylist.getName()" class="form-control" type="text">
+  
+  <button type="submit" class="btn btn-success">Update Stylist's Info</button>
+</form>
+
+<br><br>
+
+<h3>Click Here to Return to Home Page</h3>
+<a href="/"><button class="btn btn-primary">Home</button></a>
+
+
+<!--add-stylist-form.vtl-->

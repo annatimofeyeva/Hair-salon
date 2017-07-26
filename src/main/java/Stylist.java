@@ -65,4 +65,25 @@ public class Stylist {
           .getKey();
       }
     }
+
+    public void updateName(String name) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE stylists SET name = :name WHERE id=:id;";
+      con.createQuery(sql)
+        .addParameter("name", name)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
+
+  public void delete() {
+      try(Connection con = DB.sql2o.open()) {
+      String sql = "DELETE FROM stylists WHERE id=:id;";
+      con.createQuery(sql)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
+
+
 }

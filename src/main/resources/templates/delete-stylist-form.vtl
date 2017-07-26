@@ -1,0 +1,21 @@
+<!--delete-stylist-form.vtl-->
+<h1>Delete Client</h1>
+
+<div class="jumbotron">
+#if($empty == false)
+<h3>Please reassign this Stylists clients before deleting.</h3>
+
+#else
+
+  <h3>Are You SURE You Want to Delete $stylist.getName()??
+  <form action="/stylist/$stylist.getId()/delete" method="post">
+    <button type="submit" class="btn btn-danger">DELETE STYLIST</button>
+  </form>
+#end
+</div>
+
+<h3>Click Here to Return to Home Page</h3>
+<a href="/"><button class="btn btn-primary">Home</button></a>
+
+
+<!--delete-stylist-form.vtl-->
