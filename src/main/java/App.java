@@ -80,9 +80,9 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Client client = Client.find(Integer.parseInt(request.params(":id")));
       client.delete();
-      model.put("template", "templates/index.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+      response.redirect("/");
+      return null;
+    });
 
     get("/stylist/:id/clients/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
